@@ -1,0 +1,20 @@
+{
+  "folders": [
+    {
+      "path": ".."
+    }
+  ],
+  "settings": {
+    "editor.codeActionsOnSave": {
+        "source.fixAll.": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false,
+    "eslint.alwaysShowStatus": true,
+    "eslint.debug": true,
+    "prettier.requireConfig": true,
+    "[markdown]": {
+      "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    }
+  }
+}
