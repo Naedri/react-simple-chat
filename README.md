@@ -22,8 +22,8 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+-   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
@@ -41,28 +41,28 @@ Your challenge is to create a minimal chat UI:
 
 ### Functionalities
 
-- Authentication is not needed
-- Texts written in input column should appear in message list when then “Send” button is clicked
-- When a message contains a link, the link should be clickable
-- On browser reload, any sent messages should persist
+-   Authentication is not needed
+-   Texts written in input column should appear in message list when then “Send” button is clicked
+-   When a message contains a link, the link should be clickable
+-   On browser reload, any sent messages should persist
 
 ### Requirements
 
-- Code must be in React and Typescript. Add typing where you think it’s important.
+-   Code must be in React and Typescript. Add typing where you think it’s important.
 
 ### Bonus
 
-- Good/clean UI
-- Generate URL preview if a message contains a link
-- Allow deleting a message
+-   Good/clean UI
+-   Generate URL preview if a message contains a link
+-   Allow deleting a message
 
 **Notes:**
 
 With some experience in React, you will not spend more than 3 hours for this challenge. What we want to see is..
 
-- Ability to code based on the given mock up
-- Managing state in React
-- Good preference in code styles (ie. code is easy to read, well formatted, clear logic, no type errors)
+-   Ability to code based on the given mock up
+-   Managing state in React
+-   Good preference in code styles (ie. code is easy to read, well formatted, clear logic, no type errors)
 
 ## How did I code the app ?
 
