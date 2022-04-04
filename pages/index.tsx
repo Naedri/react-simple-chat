@@ -1,9 +1,13 @@
 import type { NextPage } from 'next';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
+import Button from '../components/button/Button';
+import Form from '../components/form/Form';
+import UncontrolledInput from '../components/input/UncontrolledInput';
+import MessageList from '../components/message/MessageList';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 
 const Home: NextPage = () => {
-    const [messages, setMessages] = useLocalStorage<{ message: string; id: number }[]>('chat-app-test', []);
+    const [messages, setMessages] = useLocalStorage<{ id: number; content: string }[]>('chat-app-test', []);
     const formRef = useRef<HTMLFormElement>(null);
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
@@ -11,23 +15,22 @@ const Home: NextPage = () => {
             ['user-message']: { value: string };
         };
         const newMessage = target['user-message'].value;
-        setMessages((prev) => [...prev, { message: newMessage, id: new Date().getTime() }]);
+        setMessages((prev) => [...prev, { id: new Date().getTime(), content: newMessage }]);
         formRef.current?.reset();
     }
     return (
         <>
             <h1>Chat app</h1>
-            <div className="chat">
-                <ul>
-                    {messages.map(({ id, message }) => (
-                        <li key={id}>{message}</li>
-                    ))}
-                </ul>
-            </div>
-            <form ref={formRef} onSubmit={handleSubmit}>
-                <input name="user-message"></input>
-                <button>Send</button>
-            </form>
+            <MessageList messages={messages}></MessageList>
+            <Form ref={formRef} onSubmit={handleSubmit}>
+                <UncontrolledInput
+                    id="user-message"
+                    name="user-message"
+                    required
+                    placeholder="Write your message"
+                ></UncontrolledInput>
+                <Button type="submit">Send</Button>
+            </Form>
             <button onClick={() => setMessages([])}>Clear</button>
         </>
     );
