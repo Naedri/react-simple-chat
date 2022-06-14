@@ -3,8 +3,8 @@ import { CSSProperties, LegacyRef } from 'react';
 /**
  * Personalized Form element to easier its utilization
  * @param children of this component
- * @param handleSubmit action on click
- * @param formRef
+ * @param onSubmit action on click
+ * @param ref
  * @param style
  * @constructor
  */

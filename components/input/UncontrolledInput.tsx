@@ -1,3 +1,4 @@
+import { RefObject } from 'react';
 import Field from '../field/Field';
 
 /**
@@ -12,6 +13,7 @@ export default function UncontrolledInput({
     label = undefined,
     defaultValue = undefined,
     pattern = undefined,
+    ref = undefined,
     ...rest
 }: {
     id: string;
@@ -22,6 +24,7 @@ export default function UncontrolledInput({
     label?: string;
     defaultValue?: string;
     pattern?: string;
+    ref?: RefObject<HTMLInputElement>;
 }): JSX.Element {
     return (
         <Field>
@@ -37,6 +40,7 @@ export default function UncontrolledInput({
                 required={required}
                 className="field__input"
                 placeholder={placeholder}
+                ref={ref}
                 {...rest}
             />
         </Field>
